@@ -12,6 +12,7 @@
         "name": "Marcel Pociot",
         "email": "m.pociot@gmail.com"
     }],
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.0",
         "botman/botman": "~2.1",
