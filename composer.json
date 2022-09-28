@@ -13,6 +13,7 @@
         "email": "m.pociot@gmail.com"
     }],
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=7.0",
         "botman/botman": "~2.1",
@@ -25,6 +26,9 @@
         "illuminate/support": "~5.0",
         "mockery/mockery": "^1.1",
         "ext-curl": "*"
+    },
+    "replace": {
+	    "botman/driver-slack": "^2.0"
     },
     "repositories": [
         {
