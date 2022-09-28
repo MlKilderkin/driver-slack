@@ -15,7 +15,7 @@
     "require": {
         "php": ">=7.0",
         "botman/botman": "~2.1",
-        "mpociot/slack-client": "~1.0"
+        "borkweb/slack-client": "dev-rtm-connect-pr"
     },
     "require-dev": {
         "botman/studio-addons": "~1.0",
@@ -25,6 +25,14 @@
         "mockery/mockery": "^1.1",
         "ext-curl": "*"
     },
+    "repositories": [
+        {
+            "name": "borkweb/slack-client",
+            "type": "github",
+            "url": "https://github.com/borkweb/slack-client",
+            "no-api": true
+        }
+    ],
     "suggest": {
         "mpociot/slack-client": "Use the Slack RTM API with BotMan"
     },
