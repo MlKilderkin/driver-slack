@@ -1,5 +1,5 @@
 {
-    "name": "borkweb/driver-slack",
+    "name": "mlkilderkin/driver-slack",
     "license": "MIT",
     "description": "Slack driver for BotMan",
     "keywords": [
@@ -15,12 +15,12 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.2",
         "botman/botman": "~2.1",
-        "borkweb/slack-client": "dev-rtm-connect-pr"
+        "mlkilderkin/slack-client": "dev-rtm-connect-pr"
     },
     "require-dev": {
-        "botman/studio-addons": "~1.0",
+        "mlkilderkin/studio-addons": "*",
         "phpunit/phpunit": "~5.0",
         "illuminate/console": "~5.0",
         "illuminate/support": "~5.0",
@@ -28,13 +28,19 @@
         "ext-curl": "*"
     },
     "replace": {
-	    "botman/driver-slack": "^2.0"
+	    "mlkilderkin/driver-slack": "^2.0"
     },
     "repositories": [
         {
-            "name": "borkweb/slack-client",
+            "name": "mlkilderkin/slack-client",
             "type": "github",
-            "url": "https://github.com/borkweb/slack-client",
+            "url": "https://github.com/MlKilderkin/slack-client",
+            "no-api": true
+        },
+        {
+            "name": "mlkilderkin/studio-addons",
+            "type": "github",
+            "url": "https://github.com/MlKilderkin/studio-addons",
             "no-api": true
         }
     ],
@@ -60,6 +66,12 @@
             "providers": [
                 "BotMan\\Drivers\\Slack\\Providers\\SlackServiceProvider"
             ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "thecodingmachine/discovery": true,
+            "kylekatarnls/update-helper": true
         }
     }
 }
